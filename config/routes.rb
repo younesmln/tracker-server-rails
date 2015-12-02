@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  namespace :api do
+    post '/insertPosition', to: 'api#insert_position'
+  end
+  get '/map', to: 'shower#map', as: 'map'
+  get '/hello', to: 'shower#hello', as: 'hello'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

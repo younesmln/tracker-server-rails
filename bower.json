@@ -1,0 +1,34 @@
+{
+  "name": "tracker",
+  "authors": [
+    "younes <dev.meliani@gmail.com>"
+  ],
+  "description": "pfe back end app",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "vendor/assets/components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery-timeago": "",
+    "jquery-ujs": "",
+    "gmaps": ""
+  },
+  "install": {
+    "path": {
+      "css": "vendor/assets/stylesheets",
+      "js": "vendor/assets/javascripts",
+      "eot": "vendor/assets/fonts",
+      "svg": "vendor/assets/fonts",
+      "ttf": "vendor/assets/fonts",
+      "woff": "vendor/assets/fonts"
+    }
+  }
+}

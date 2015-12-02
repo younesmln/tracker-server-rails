@@ -1,0 +1,90 @@
+=begin
+nom = "moi 2"
+bool = false
+puts "hello world #{nom}"
+
+i = 0
+while true
+  puts "je suis : #{i}"
+  i += 1
+  if i>25
+    break
+  end
+end
+#######################################################
+hash = { username: "younes", prenom: 21, date: "10/10/10" }
+puts hash[:name]
+puts hash[:age]
+######################################################
+def calcul(x, y)
+  if y != 0
+    result = x/y
+  else
+    result = "impossible"
+  end
+  return result
+end
+
+puts calcul(15, 1)
+(1..25).each do |i|
+  puts "je suis : #{i}"
+end
+b = []
+(1..25).each do |i|
+  b.push(i*15)
+end
+def parcour(array, x)
+  array.each do |elem|
+    if elem == x
+      return true
+    end
+  end
+  return false
+end
+puts parcour(b, 346)
+=end
+
+###########################################
+###########################################
+###########################################
+class Voiture
+  #attr_reader @matr, @mark
+  #attr_writer @matr, @mark
+  attr_accessor :mark, :matr, :niveau, :v
+  @@v = []
+
+  def initialize(matricule, mark, nv)
+    @matr = matricule
+    @mark = mark
+    @niveau = nv
+    mine = self
+    @@v.push(mine.niveau)
+  end
+
+  def show()
+    puts "je suis #{@mark} avec #{@matr} "
+  end
+
+  def self.show_voiture()
+    @@v.each do |a|
+      puts "#{a.inspect}"
+    end
+  end
+
+  def comparer(v)
+    if @niveau > v.niveau
+      statut = "je suis forte"
+    else
+      statut = "je suis faible"
+    end
+    return statut
+  end
+end
+
+
+
+v = Voiture.new("21231", "ibiza", 4)
+v1 = Voiture.new("21231", "picanto", 2)
+v2 = Voiture.new("21231", "leon", 6)
+v4 = Voiture.new("21231", "picanto", 2)
+Voiture.show_voiture
