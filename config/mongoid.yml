@@ -135,3 +135,10 @@ test:
         read:
           mode: :primary
         max_pool_size: 1
+
+production:
+  host: <%= ENV['OPENSHIFT_MONGODB_DB_HOST'] %>
+  port: <%= ENV['OPENSHIFT_MONGODB_DB_PORT'] %>
+  username: <%= ENV['OPENSHIFT_MONGODB_DB_USERNAME'] %>
+  password: <%= ENV['OPENSHIFT_MONGODB_DB_PASSWORD'] %>
+  database: <%= ENV['OPENSHIFT_MONGODB_DB_DATABASE'] %>

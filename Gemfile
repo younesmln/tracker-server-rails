@@ -24,10 +24,9 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
-gem "responders"
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
-gem 'faker'
+
 # Use Unicorn as the app server
 # gem 'unicorn'
 # Use Capistrano for deployment
@@ -36,10 +35,14 @@ gem 'faker'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   #gem 'thin'
+  gem 'faker'
   gem 'better_errors'
-  #gem 'puma'
   gem 'binding_of_caller'
   gem 'rack-mini-profiler'
+end
+
+group :production do
+  gem "puma"
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
