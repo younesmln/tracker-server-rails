@@ -34,7 +34,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  #gem 'thin'
+  gem 'thin'
   gem 'faker'
   gem 'better_errors'
   gem 'binding_of_caller'
@@ -42,7 +42,7 @@ group :development, :test do
 end
 
 group :production do
-  gem "puma"
+  gem 'passenger'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
