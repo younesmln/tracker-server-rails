@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.2.3'
+gem 'rails', '4.2.5'
 # Mongodb Database
 gem 'mongoid'
 gem 'bson_ext'
@@ -39,6 +39,8 @@ group :development, :test do
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'rack-mini-profiler'
+  gem 'capistrano'
+  gem 'capistrano-passenger'
 end
 
 group :production do
