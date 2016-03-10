@@ -2,27 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="59399460-3136-4fb4-8cd9-d423a9f53eb4" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.openshift/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.openshift/action_hooks/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.openshift/action_hooks/deploy" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.openshift/action_hooks/override/restart" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.openshift/action_hooks/override/start" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.openshift/action_hooks/override/stop" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.openshift/cron/README.cron" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.openshift/cron/daily/.gitignore" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.openshift/cron/hourly/.gitignore" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.openshift/cron/minutely/.gitignore" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.openshift/cron/monthly/.gitignore" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.openshift/cron/weekly/README" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.openshift/cron/weekly/chrono.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.openshift/cron/weekly/chronograph" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.openshift/cron/weekly/jobs.allow" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.openshift/cron/weekly/jobs.deny" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.openshift/markers/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/config/puma.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/younes.txt" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/tracker.iml" afterPath="$PROJECT_DIR$/.idea/tracker.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="tracker.iws" />
@@ -92,7 +73,7 @@
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.65882355">
-              <caret line="14" column="5" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
+              <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -765,7 +746,30 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="IRB console.Rails console: tracker">
+  <component name="RunManager" selected="Rake.test: tracker">
+    <configuration default="false" name="db:mongoid:create_indexes: tracker" type="RakeRunConfigurationType" factoryName="Rake" temporary="true">
+      <module name="tracker" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$MODULE_DIR$" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
+      <envs />
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov">
+        <COVERAGE_PATTERN ENABLED="true">
+          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
+        </COVERAGE_PATTERN>
+      </EXTENSION>
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_NAME" VALUE="db:mongoid:create_indexes" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_ARGS" VALUE="" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_ATTACHED_TEST_FRAMEWORKS" VALUE="" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_TRACE" VALUE="false" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_DRYRUN" VALUE="false" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_PREREQS" VALUE="false" />
+      <method />
+    </configuration>
     <configuration default="false" name="test" type="RubyRunConfigurationType" factoryName="Ruby" temporary="true">
       <module name="tracker" />
       <RUBY_RUN_CONFIG NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
@@ -841,29 +845,6 @@
       <IRB_RUN_CONFIG NAME="SCRIPT_PATH" VALUE="$MODULE_DIR$/bin/rails" />
       <IRB_RUN_CONFIG NAME="SCRIPT_ARGS" VALUE="console" />
       <IRB_RUN_CONFIG NAME="IS_RAILS_CONSOLE" VALUE="true" />
-      <method />
-    </configuration>
-    <configuration default="false" name="db:mongoid:create_indexes: tracker" type="RakeRunConfigurationType" factoryName="Rake" temporary="true">
-      <module name="tracker" />
-      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
-      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$MODULE_DIR$" />
-      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
-      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
-      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
-      <envs />
-      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
-      <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
-      <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov">
-        <COVERAGE_PATTERN ENABLED="true">
-          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
-        </COVERAGE_PATTERN>
-      </EXTENSION>
-      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_NAME" VALUE="db:mongoid:create_indexes" />
-      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_ARGS" VALUE="" />
-      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_ATTACHED_TEST_FRAMEWORKS" VALUE="" />
-      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_TRACE" VALUE="false" />
-      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_DRYRUN" VALUE="false" />
-      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_PREREQS" VALUE="false" />
       <method />
     </configuration>
     <configuration default="true" type="CucumberRunConfigurationType" factoryName="Cucumber">
@@ -1067,18 +1048,19 @@
       <item index="1" class="java.lang.String" itemvalue="Rake.spec: tracker" />
       <item index="2" class="java.lang.String" itemvalue="Rails.Production: tracker" />
       <item index="3" class="java.lang.String" itemvalue="Rails.Development: tracker" />
-      <item index="4" class="java.lang.String" itemvalue="Ruby.test" />
-      <item index="5" class="java.lang.String" itemvalue="Ruby.test (1)" />
-      <item index="6" class="java.lang.String" itemvalue="Ruby.test (2)" />
-      <item index="7" class="java.lang.String" itemvalue="IRB console.Rails console: tracker" />
-      <item index="8" class="java.lang.String" itemvalue="Rake.db:mongoid:create_indexes: tracker" />
+      <item index="4" class="java.lang.String" itemvalue="Rake.db:mongoid:create_indexes: tracker" />
+      <item index="5" class="java.lang.String" itemvalue="Ruby.test" />
+      <item index="6" class="java.lang.String" itemvalue="Ruby.test (1)" />
+      <item index="7" class="java.lang.String" itemvalue="Ruby.test (2)" />
+      <item index="8" class="java.lang.String" itemvalue="IRB console.Rails console: tracker" />
     </list>
     <recent_temporary>
-      <list size="4">
-        <item index="0" class="java.lang.String" itemvalue="IRB console.Rails console: tracker" />
-        <item index="1" class="java.lang.String" itemvalue="Rake.db:mongoid:create_indexes: tracker" />
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="Rake.db:mongoid:create_indexes: tracker" />
+        <item index="1" class="java.lang.String" itemvalue="IRB console.Rails console: tracker" />
         <item index="2" class="java.lang.String" itemvalue="Ruby.test (2)" />
         <item index="3" class="java.lang.String" itemvalue="Ruby.test (1)" />
+        <item index="4" class="java.lang.String" itemvalue="Ruby.test" />
       </list>
     </recent_temporary>
   </component>
@@ -1526,7 +1508,7 @@
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.65882355">
-          <caret line="14" column="5" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
+          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
           <folding />
         </state>
       </provider>
