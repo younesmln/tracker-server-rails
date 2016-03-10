@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :invoices
+  resources :clients
   namespace :api do
     post '/insertPosition', to: 'api#insert_position'
   end

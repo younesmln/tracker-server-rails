@@ -3,9 +3,16 @@ class Client
   include Mongoid::Timestamps::Created
   include Mongoid::Geospatial
 
-  field :first_name
-  field :last_name
-  field :location, type: Point
+  field :f_name, type: String
+  field :l_name, type: String
+  field :phone, type: String
+  field :location, type: Point, sphere: true
+  spatial_scope :location
 
-  #validates :first_name, :last_name, presence: true
+  embeds_many :invoices, inverse_of: :client
+
+  def id
+  	self._id.to_s
+  end
+
 end

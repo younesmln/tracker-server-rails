@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>F name:</strong>
+  <%= @client.f_name %>
+</p>
+
+<p>
+  <strong>L name:</strong>
+  <%= @client.l_name %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @client.phone %>
+</p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @client.location %>
+</p>
+
+<%= link_to 'Edit', edit_client_path(@client) %> |
+<%= link_to 'Back', clients_path %>

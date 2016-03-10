@@ -92,7 +92,7 @@ development:
         # A passphrase for the private key.
         # ssl_key_pass_phrase: password
 
-        # Whether or not to do peer certification validation. (default: false)
+        # Whether or not to do peer certification validation. (default: true)
         # ssl_verify: true
 
         # The file containing a set of concatenated certification authority certifications
@@ -125,6 +125,11 @@ development:
 
     # Ensure all times are UTC in the app side. (default: false)
     # use_utc: false
+
+    # Set the Mongoid and Ruby driver log levels when not in a Rails
+    # environment. The Mongoid logger will be set to the Rails logger
+    # otherwise.(default: :info)
+    # log_level: :info
 test:
   clients:
     default:
@@ -135,10 +140,3 @@ test:
         read:
           mode: :primary
         max_pool_size: 1
-
-production:
-  host: <%= ENV['OPENSHIFT_MONGODB_DB_HOST'] %>
-  port: <%= ENV['OPENSHIFT_MONGODB_DB_PORT'] %>
-  username: <%= ENV['OPENSHIFT_MONGODB_DB_USERNAME'] %>
-  password: <%= ENV['OPENSHIFT_MONGODB_DB_PASSWORD'] %>
-  database: <%= ENV['OPENSHIFT_MONGODB_DB_DATABASE'] %>
