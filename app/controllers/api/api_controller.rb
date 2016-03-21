@@ -12,6 +12,7 @@ class Api::ApiController < ActionController::Base
     rescue Exception => e
       render text: "error #{e.message} \n\n\n #{e.backtrace.inspect}" and return
     end
-    render text: 'ok'
+    @clients = Client.all
+    render template: 'clients/index.json.jbuilder'
   end
 end

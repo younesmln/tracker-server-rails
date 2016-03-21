@@ -8,7 +8,7 @@ class Client
   field :phone, type: String
   field :location, type: Point, sphere: true
   spatial_scope :location
-
+  #geo_spacial
   embeds_many :invoices, inverse_of: :client
 
   def id
