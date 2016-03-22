@@ -10,5 +10,5 @@
   <%= @invoice.remaining %>
 </p>
 
-<%= link_to 'Edit', edit_invoice_path(@invoice) %> |
-<%= link_to 'Back', invoices_path %>
+<%= link_to 'Edit', edit_client_invoice_path(@client, @invoice) %> |
+<%= link_to 'Back', client_invoices_path(@client) %>

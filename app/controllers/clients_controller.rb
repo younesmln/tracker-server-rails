@@ -1,5 +1,5 @@
 class ClientsController < ApplicationController
-  before_action :set_client, only: [:show, :edit, :update, :destroy]
+  before_action :set_client, only: [:show, :edit, :update, :destroy, :include_invoices]
 
   # GET /clients
   # GET /clients.json
@@ -10,6 +10,10 @@ class ClientsController < ApplicationController
   # GET /clients/1
   # GET /clients/1.json
   def show
+  end
+
+  def include_invoices
+    @invoices = @client.invoices
   end
 
   # GET /clients/new

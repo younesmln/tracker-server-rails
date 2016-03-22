@@ -16,9 +16,9 @@
       <tr>
         <td><%= invoice.total %></td>
         <td><%= invoice.remaining %></td>
-        <td><%= link_to 'Show', invoice %></td>
-        <td><%= link_to 'Edit', edit_invoice_path(invoice) %></td>
-        <td><%= link_to 'Destroy', invoice, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', client_invoice_path(@client, invoice) %></td>
+        <td><%= link_to 'Edit', edit_client_invoice_path(@client, invoice) %></td>
+        <td><%= link_to 'Destroy', client_invoice_path(@client, invoice), method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -26,4 +26,4 @@
 
 <br>
 
-<%= link_to 'New Invoice', new_invoice_path %>
+<%= link_to 'New Invoice', new_client_invoice_path %>

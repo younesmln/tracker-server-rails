@@ -1,6 +1,12 @@
 Rails.application.routes.draw do
-  resources :invoices
-  resources :clients
+
+  resources :products
+  resources :clients do
+    resources :invoices
+    member do
+      get '/include_invoices', to: 'clients#include_invoices'
+    end
+  end
   namespace :api do
     post '/insertPosition', to: 'api#insert_position'
   end

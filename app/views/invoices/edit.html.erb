@@ -2,5 +2,5 @@
 
 <%= render 'form' %>
 
-<%= link_to 'Show', @invoice %> |
-<%= link_to 'Back', invoices_path %>
+<%= link_to('Show', [@client, @invoice]) %> |
+<%= link_to 'Back', client_invoices_path(@client) %>
