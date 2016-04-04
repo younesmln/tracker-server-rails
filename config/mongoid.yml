@@ -140,3 +140,7 @@ test:
         read:
           mode: :primary
         max_pool_size: 1
+
+production:
+    default:
+      uri: <%= ENV['MLAB_URI'] %>

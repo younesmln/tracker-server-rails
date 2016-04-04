@@ -1,0 +1,22 @@
+<nav>
+  <div class="nav-wrapper">
+    <%= link_to 'Tracker', root_path , class: 'brand-logo center' %>
+    <% if 'logged_in?' %>
+        <a href="#" data-activates="mobile-demo" class="button-collapse show-on-large">
+          <i class="material-icons">menu</i>
+        </a>
+        <ul class="side-nav" id="mobile-demo">
+          <li><%= link_to 'Map', root_path %></li>
+          <li><%= link_to 'Clients', clients_path %></li>
+          <li><%= link_to 'Products', products_path %></li>
+        </ul>
+    <% end %>
+    <ul class="right">
+      <% 'if logged_in?' %>
+          <li><%= link_to 'logout', 'logout_path', method: :delete %></li>
+      <% 'else' %>
+          <li><%= link_to 'login ', 'login_page_path' %></li>
+      <% 'end' %>
+    </ul>
+  </div>
+</nav>

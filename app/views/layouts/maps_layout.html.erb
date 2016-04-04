@@ -3,14 +3,15 @@
 <head>
   <title>Tracker</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script type="text/javascript" src="http://maps.google.com/maps/api/js?key=AIzaSyAkOQyoIB_TNzc4h40TQqexyQ0gP4uSLZM"></script>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'maps', 'data-turbolinks-track' => true %>
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <%= csrf_meta_tags %>
 </head>
 <body>
   <%= render partial: 'layouts/navbar' %>
-  <div class="container">
+  <div class="main">
     <%= yield %>
   </div>
   <script>

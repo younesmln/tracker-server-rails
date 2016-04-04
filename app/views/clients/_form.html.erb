@@ -11,23 +11,23 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :f_name %><br>
+  <div class="input-field col s6">
     <%= f.text_field :f_name %>
+    <%= f.label :f_name %>
   </div>
-  <div class="field">
-    <%= f.label :l_name %><br>
+  <div class="input-field col s6">
     <%= f.text_field :l_name %>
+    <%= f.label :l_name %>
   </div>
-  <div class="field">
-    <%= f.label :phone %><br>
+  <div class="input-field col s6">
+    <%= f.label :phone %>
     <%= f.text_field :phone %>
   </div>
-  <div class="field">
-    <%= f.label :location %><br>
+  <div class="input-field col s6">
+    <%= f.label :location %>
     <%= f.text_field :location %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit 'Submit', class: 'waves-effect waves-light btn' %>
   </div>
 <% end %>

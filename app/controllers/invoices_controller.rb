@@ -31,7 +31,7 @@ class InvoicesController < ApplicationController
     respond_to do |format|
       if @invoice.save
         format.html { redirect_to client_invoices_url(@client, @invoice), notice: 'Invoice was successfully created.' }
-        format.json { render :show, status: :created, location: @invoice }
+        format.json { render :show, status: :created, location: client_invoices_url(@client, @invoice) }
       else
         format.html { render :new }
         format.json { render json: @invoice.errors, status: :unprocessable_entity }
@@ -45,7 +45,7 @@ class InvoicesController < ApplicationController
     respond_to do |format|
       if @invoice.update(invoice_params)
         format.html { redirect_to client_invoice_url(@client,@invoice), notice: 'Invoice was successfully updated.' }
-        format.json { render :show, status: :ok, location: @invoice }
+        format.json { render :show, status: :ok, location: client_invoices_url(@client, @invoice) }
       else
         format.html { render :edit }
         format.json { render json: @invoice.errors, status: :unprocessable_entity }
@@ -71,7 +71,7 @@ class InvoicesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def invoice_params
-      params.require(:invoice).permit(:total, :remaining)
+      params.require(:invoice).permit(:total, :remaining, products: [:product_id, :label, :count])
     end
 
   def load_client

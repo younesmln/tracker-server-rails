@@ -1,4 +1,4 @@
-<div id="map"></div>
+ <div id="map" class="card-panel"></div>
 <script>
   $("body").ready(function(){
     var loc = $.parseJSON('<%= @positions.html_safe %>');
@@ -6,6 +6,6 @@
       var date = new Date(l.time);
       mapper.addMarker(l.position[0],l.position[1], $.timeago(date));
     });
-    var timeInt = setInterval(mapper.fetcher, 2 * 1000);
+    var timeInt = setInterval(mapper.fetcher, 20 * 1000);
    });
 </script>

@@ -6,7 +6,6 @@ class Product
   field :price, type: Float
   field :count, type: Integer, default: 0
 
-  belongs_to :invoice, inverse_of: 'products'
   def id
     self._id.to_s
   end

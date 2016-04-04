@@ -11,23 +11,23 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :label %><br>
+  <div class="input-field col s6">
+    <%= f.label :label %>
     <%= f.text_field :label %>
   </div>
-  <div class="field">
-    <%= f.label :desc %><br>
-    <%= f.text_field :desc %>
-  </div>
-  <div class="field">
-    <%= f.label :price %><br>
+  <div class="input-field col s6">
+    <%= f.label :price %>
     <%= f.text_field :price %>
   </div>
-  <div class="field">
-    <%= f.label :count %><br>
+  <div class="input-field col s6">
+    <%= f.label :count %>
     <%= f.number_field :count %>
   </div>
+  <div class="input-field col s6">
+     <%= f.label :desc %><br>
+     <%= f.text_field :desc %>
+  </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit 'Submit',class: 'waves-effect waves-light btn'%>
   </div>
 <% end %>

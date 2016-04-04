@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
 
+  devise_for :users
+  get 'courses/index'
+
   resources :products
   resources :clients do
     resources :invoices
@@ -10,8 +13,8 @@ Rails.application.routes.draw do
   namespace :api do
     post '/insertPosition', to: 'api#insert_position'
   end
+  root 'shower#map'
   get '/map', to: 'shower#map', as: 'map'
-  get '/hello', to: 'shower#hello', as: 'hello'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

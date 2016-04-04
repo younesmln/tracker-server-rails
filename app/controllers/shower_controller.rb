@@ -1,4 +1,6 @@
 class ShowerController < ApplicationController
+  layout 'maps_layout'
+
   def map
     cars = Car.all
     @positions = []

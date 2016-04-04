@@ -1,24 +1,56 @@
-<p id="notice"><%= notice %></p>
+<div class="row">
+  <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>F name:</strong>
-  <%= @client.f_name %>
-</p>
+  <p>
+    <strong>F name:</strong>
+    <%= @client.f_name %>
+  </p>
 
-<p>
-  <strong>L name:</strong>
-  <%= @client.l_name %>
-</p>
+  <p>
+    <strong>L name:</strong>
+    <%= @client.l_name %>
+  </p>
 
-<p>
-  <strong>Phone:</strong>
-  <%= @client.phone %>
-</p>
+  <p>
+    <strong>Phone:</strong>
+    <%= @client.phone %>
+  </p>
 
-<p>
-  <strong>Location:</strong>
-  <%= @client.location %>
-</p>
+  <p>
+    <strong>Location:</strong>
+    <%= @client.location %>
+  </p>
 
-<%= link_to 'Edit', edit_client_path(@client) %> |
-<%= link_to 'Back', clients_path %>
+  <%= link_to 'Edit', edit_client_path(@client) %> |
+  <%= link_to 'Back', clients_path %>
+
+  <% if @client.invoices.count < 1 %>
+    <script> Materialize.toast("this client has no invoices ", 4000); </script>
+  <% else %>
+      <table class="highlighted responsive-table centered">
+        <thead>
+        <tr>
+          <th>Total</th>
+          <th>Remaining</th>
+          <th>products</th>
+        </tr>
+        </thead>
+        <tbody>
+        <% @client.invoices.each do |invoice|%>
+            <tr class="">
+              <td><%= invoice.total %></td>
+              <td><%= invoice.remaining %></td>
+              <td><a class='dropdown-button btn' href='#' data-activates='dropdown<%= invoice.id %>'>
+                    <%= pluralize(invoice.products.count, 'product') %>
+                  </a>
+                <!-- Dropdown Structure -->
+                <ul id='dropdown<%= invoice.id %>' class='dropdown-content'>
+                  <%= products_format(invoice) %>
+                </ul>
+              </td>
+            </tr>
+        <% end %>
+        </tbody>
+      </table>
+  <% end %>
+</div>
